@@ -1,0 +1,53 @@
+print('Rock, paper, scissors\n\n')
+print("Options:'scissors', 'rock', 'paper'.")
+
+while True:
+    p1=input('\nPlayer 1: ')
+    if p1=='scissors' or p1=='paper' or p1=='rock':
+        p2=input('Player 2: ')
+    else:
+        print('Inexistent option player 1.')
+    if p1=='scissors':
+        if p2=='rock':
+            print('Congrats player 2! You won.')
+        elif p2=='paper':
+            print('Congrats player 1! You won.')
+        elif p2==p1:
+            print('Try again.')
+        else:
+            print('Inexistent option player 2.')
+    elif p1=='paper':
+        if p2=='rock':
+            print('Congrats player 1! You won.')
+        elif p2=='scissors':
+            print('Congrats player 2! You won.')
+        elif p2==p1:
+            print('Try again.')
+        else:
+            print('Inexistent option player 2.')
+    elif p1=='rock':
+        if p2=='scissors':
+            print('Congrats player 1! You won.')
+        elif p2=='paper':
+            print('Congrats player 2! You won.')
+        elif p2==p1:
+            print('Try again.')
+        else:
+            print('Inexistent option player 2.')
+        
+    option=input("Would you like to play more? Type 'yes' or 'no': ")
+    if option=='yes':
+        continue
+    elif option=='no':
+        print('The program has stopped.')
+        break
+    else:
+        option=input("Inexistent option. Would you like to play more? Type 'yes' or 'no': ")       
+        if option=='yes':
+            continue
+        elif option=='no':
+            print('The program has stopped.')
+            break
+        else:
+            print('Inexistent option. The program has stopped.')
+            break
